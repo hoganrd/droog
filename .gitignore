@@ -1,0 +1,7 @@
+*.pyc
+*.git
+*.komodotools
+*.komodoproject
+results
+__pycache__
+configuration.py
