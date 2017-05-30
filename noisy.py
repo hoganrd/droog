@@ -41,7 +41,10 @@ def filter_variants(drug, d1, d2, limit=3, progress=False):
     filtered = []
     filtered.append((drug, google_hits(drug)))
     for i, row in enumerate(candidates):
-        filtered.append((row[0], google_hits(row[0])))
+        # print(i, row[0], end='')
+        gh = google_hits(row[0])
+        # print(gh)
+        filtered.append((row[0], gh))
         if progress and i % 100 == 0:
             print(str(i) + '/' + str(len(candidates)))
         if limit > 0 and i > limit:     # limit=0 for all candidates
